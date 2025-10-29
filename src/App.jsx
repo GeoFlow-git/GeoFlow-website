@@ -1,3 +1,8 @@
+
+//  "homepage": "https://GeoFlow-git.github.io/GeoFlow-website/",
+
+
+
 // import { useState } from 'react'          // Hook de estado de React
 // import reactLogo from './assets/react.svg'  // Logo de React
 // import viteLogo from '/vite.svg'            // Logo de Vite

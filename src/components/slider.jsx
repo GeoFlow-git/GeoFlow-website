@@ -15,7 +15,7 @@ function Slider() {
 
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="/geothermal_2.jpg" className="d-block w-100" alt="Energía Geotérmica"  />
+              <img src="geothermal_2.jpg" className="d-block w-100" alt="Energía Geotérmica"  />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Energía Geotérmica</h5>
                 <p>Explora cómo la energía del subsuelo puede alimentar ciudades enteras.</p>
@@ -23,7 +23,7 @@ function Slider() {
             </div>
 
             <div className="carousel-item">
-              <img src="/oil_2.jpg" className="d-block w-100" alt="Oil and Gas"  />
+              <img src="oil_2.jpg" className="d-block w-100" alt="Oil and Gas"  />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Oil and Gas</h5>
                 <p>Avances en tecnologías de extracción de petróleo y gas.</p>
