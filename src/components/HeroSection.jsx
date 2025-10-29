@@ -41,7 +41,7 @@ function HeroSection() {
            {/* ms-auto para empujar la imagen a la derecha */}
           <div className="col-md-5 text-center ms-auto"> {/* Aqui se ajusa el tamaño de la columna */}
             <img
-              src="/reservoir.png"
+              src="reservoir.png"
               alt="Energía geotérmica"
               className="img-fluid rounded"
               /* 600px de altura máxima y cover para que la imagen cubra el espacio */

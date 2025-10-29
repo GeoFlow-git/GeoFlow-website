@@ -26,7 +26,7 @@ function SobreMi() {
 
           <div className="col-md-5 text-center px-3 sobre-mi-imagen">
             <img
-              src="/Foto.jpg"
+              src="Foto.jpg"
               alt="Luis"
               className="img-fluid rounded-circle"
               style={{ width: '250px', height: '250px', objectFit: 'cover' }}

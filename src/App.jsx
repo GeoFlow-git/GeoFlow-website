@@ -112,7 +112,7 @@ function App() {
       <div className="row">
         <div className="col-md-4 mb-4">
           <Card
-            image="/geothermal.jpg"
+            image="geothermal.jpg"
             title="Energía Geotérmica"
             text="Explora cómo la energía del subsuelo puede alimentar ciudades enteras."
             link="https://es.wikipedia.org/wiki/Energ%C3%ADa_geot%C3%A9rmica"
@@ -122,7 +122,7 @@ function App() {
         <div className="col-md-4 mb-4">
           <Card
           
-            image="/oil.jpg"
+            image="oil.jpg"
             title="Oil and Gas"
             text="Discover the latest advancements in oil and gas extraction technologies."
             link="https://en.wikipedia.org/wiki/Oil_and_gas_industry"
@@ -132,7 +132,7 @@ function App() {
 
         <div className="col-md-4 mb-4">
           <Card
-            image="/acuifero.jpg"
+            image="acuifero.jpg"
             title="Manejo de acuiferos"
             text="Aprovecha el poder del sol para generar electricidad limpia y renovable."
             link="https://es.wikipedia.org/wiki/Energ%C3%ADa_solar"
