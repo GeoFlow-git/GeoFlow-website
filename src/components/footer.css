@@ -1,0 +1,80 @@
+/* ======= FOOTER ======= */
+.footer-geoflow {
+  background-color: #22315a;
+  /* border-top: 3px solid #b60000; */
+}
+
+.footer-geoflow .container {
+  padding: 1rem 1rem;
+  border-radius: 50px;
+  background-color: #1deb0a; /* Puedes quitarlo si no quieres ese fondo */
+  background-color: transparent; /* Fondo transparente */
+}
+
+
+/* ======= ICONOS Y ENLACES ======= */
+.icono-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff; /* color inicial texto + ícono */
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: color 0.25s ease;
+}
+
+
+/* los íconos heredan color del enlace */
+.icono-footer svg,
+.icono-footer .fa-icon {
+  width: 1.0em;       /* tamaño relativo al texto */
+  height: 1.0em;      /* tamaño relativo al texto */ 
+  font-size: 2rem;    /* tamaño fijo */
+  display: inline-block;
+  background: transparent;
+  color: inherit; /* 👈 CLAVE: hereda color del .icono-footer */
+  fill: currentColor; /* 👈 para SVGs nativos */
+  transition: color 0.25s ease, fill 0.25s ease, stroke 0.25s ease;
+}
+
+/* ======= HOVER ======= */
+.icono-footer:hover {
+  color: #00b4d8; /* cambia texto + icono */
+}
+
+
+
+/* ======= Limpieza de fondos blancos ======= */
+.footer-geoflow p,
+.footer-geoflow a,
+.footer-geoflow div {
+  background-color: transparent;
+}
+
+
+
+/* ======= FORZAR COLOR DE FONT AWESOME ======= */
+
+/* Asegura que todos los íconos dentro del footer sigan el color del enlace */
+.footer-geoflow .icono-footer .fa-icon,
+.footer-geoflow .icono-footer svg,
+.footer-geoflow .icono-footer svg path {
+  color: currentColor !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+  background: transparent !important;
+  transition: color 0.25s ease, fill 0.25s ease, stroke 0.25s ease;
+}
+
+/* Asegura que cambien de color al hover */
+.footer-geoflow .icono-footer:hover .fa-icon,
+.footer-geoflow .icono-footer:hover svg,
+.footer-geoflow .icono-footer:hover svg path {
+  color: #00b4d8 !important;
+  fill: #00b4d8 !important;
+  stroke: #00b4d8 !important;
+}
+
+

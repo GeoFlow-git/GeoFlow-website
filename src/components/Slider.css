@@ -1,0 +1,54 @@
+/* Slider.css */
+
+#geoSlider {
+  border-radius: 8px;  /* Bordes redondeados */
+  overflow: hidden;     /* Oculta cualquier desbordamiento */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);   /* Sombra para dar profundidad */
+  margin: 1px auto;   /* Margen superior e inferior, centrado horizontalmente */
+  
+}
+
+/* Contenedor para centrar el slider y limitar su ancho */
+.slider-wrapper {
+  max-width: 900px; /* o el valor que prefieras */
+  margin: 0 auto;    /* centra horizontalmente */
+}
+
+
+/*  Estilos para el contenedor del carrusel */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.9); /* fondo negro semitransparente */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/*   Estilos el titulo del slider */      
+.carousel-caption h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: aqua;
+  background-color: transparent;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/*   Estilos del etxto del slider */      
+.carousel-caption p {
+  font-size: 1rem;
+  background-color: aqua;
+  background-color: transparent;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 64, 128, 0.6);
+  border-radius: 50%;
+}
+
+.carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+}

@@ -1,0 +1,9 @@
+.hero-section h1 {
+  background-color: rgb(255, 255, 255);
+  color: #0099ff; /* Azul petróleo */
+}
+
+.hero-section p {
+  background-color: rgb(255, 255, 255);
+  color: #000000; /* Verde azulado */
+}

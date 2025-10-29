@@ -1,0 +1,112 @@
+/* ============================================================
+   NAVBAR.CSS – Estilos personalizados para la barra de navegación
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. ESTILOS GENERALES DE LA NAVBAR
+   ------------------------------------------------------------ */
+
+/* Barra principal de navegación */
+.custom-navbar {
+  background-color: #414141;         /* Color de fondo (gris oscuro) */
+  padding: 1rem 5rem;                /* Espaciado interno: vertical y horizontal */
+  position: sticky;                  /* Fija la barra al hacer scroll */
+  top: 0;                            /* Posición superior */
+  z-index: 1000;                     /* Prioridad sobre otros elementos */
+}
+
+/* Contenedor interno de la navbar */
+.custom-container {
+  background-color: transparent;     /* Fondo transparente para mantener consistencia */
+}
+
+/* Sección colapsable (visible en pantallas pequeñas) */
+.custom-navbar-collapse {
+  justify-content: flex-end;         /* Alinea los elementos a la derecha */
+  background-color: transparent;     /* Fondo transparente */
+  padding: 0.1rem;                   /* Espaciado interno mínimo */
+  font-size: 1.5rem;                 /* Tamaño base de fuente */
+  color: #ffffff;                    /* Color de texto (blanco) */
+}
+
+
+/* ------------------------------------------------------------
+   2. ENLACES DE NAVEGACIÓN
+   ------------------------------------------------------------ */
+
+/* Estilo base de los enlaces (texto del menú) */
+.custom-navbar .nav-link {
+  background-color: #414141;         /* Fondo igual al de la barra */
+  margin-right: 0;                   /* Sin espacio entre enlaces */
+  font-family: 'Segoe UI', sans-serif; /* Fuente legible y moderna */
+  font-size: 1rem;                   /* Tamaño de texto */
+  font-weight: 500;                  /* Grosor medio */
+  color: #ffffff;                    /* Color blanco por defecto */
+  text-transform: uppercase;         /* Convierte el texto a mayúsculas */
+  text-decoration: none;             /* Elimina subrayado */
+  transition: color 0.25s ease;      /* Transición suave de color */
+}
+
+/* Efecto hover sobre enlaces */
+.custom-navbar .nav-link:hover {
+  background-color: transparent;     /* Sin cambio de fondo */
+  color: #2600ff;                    /* Azul brillante al pasar el cursor */
+}
+
+
+/* ------------------------------------------------------------
+   3. ICONOS EN LA NAVBAR
+   ------------------------------------------------------------ */
+
+/* Contenedor del ícono dentro del enlace */
+.icono-navbar {
+  display: inline-flex;               /* Alinea ícono y texto en fila */
+  align-items: center;                /* Centra verticalmente el ícono */
+  gap: 8px;                           /* Espacio entre ícono y texto */
+  color: #ffffff;                     /* Color inicial (texto + ícono en blanco) */
+  background-color: #225a3e;          /* Fondo verde oscuro detrás del ícono */
+  font-size: 1.2rem;                  /* Tamaño ligeramente mayor */
+  padding: 6px 10px;                  /* Espaciado interno */
+  text-decoration: none;              /* Sin subrayado */
+  transition: color 0.25s ease, 
+              background-color 0.25s ease; /* Transiciones suaves */
+}
+
+/* El ícono (SVG) hereda el color del enlace padre */
+.icono-navbar .fa-icon,
+.icono-navbar svg {
+  color: inherit;                     /* Usa el mismo color que el contenedor */
+  fill: currentColor;                 /* Rellena según el color actual */
+  background: transparent;            /* Sin fondo */
+  transition: color 0.25s ease;
+}
+
+/* Color inicial del ícono (asegura blanco incluso si Bootstrap sobrescribe) */
+.icono-navbar .fa-icon,
+.icono-navbar svg,
+.icono-navbar svg path {
+  color: #ffffff !important;          /* Ícono blanco */
+  fill: #ffffff !important;           /* Relleno blanco */
+  stroke: #ffffff !important;         /* Contorno blanco */
+}
+
+
+/* ------------------------------------------------------------
+   4. EFECTOS HOVER DEL ÍCONO
+   ------------------------------------------------------------ */
+
+/* Cambios de color al pasar el cursor */
+.icono-navbar:hover {
+  color: #2600ff;                     /* Cambia texto e ícono a azul */
+  background-color: #ffffff;          /* Fondo pasa a blanco */
+}
+
+/* Asegura que los paths internos del SVG cambien también */
+.icono-navbar:hover .fa-icon,
+.icono-navbar:hover svg,
+.icono-navbar:hover svg path {
+  color: #2600ff !important;          /* Aplica azul a todos los niveles del ícono */
+  fill: #2600ff !important;
+  stroke: #2600ff !important;
+}

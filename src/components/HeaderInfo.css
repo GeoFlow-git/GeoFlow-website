@@ -1,0 +1,27 @@
+.header-info {
+  background-color: #ffffff;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* .empresa-nombre {
+  font-weight: bold;
+  color: #004080;
+  font-size: 1.2rem;
+} */
+
+
+
+.logos img {
+  vertical-align: middle;
+}
+
+
+.contacto a {
+  text-decoration: none;
+  color: #0a06ff;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}

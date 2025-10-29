@@ -1,0 +1,16 @@
+.tecnologias-section {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+}
+
+.tech-logo {
+  height: 60px;
+  max-width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+  transform: scale(1.1);
+}

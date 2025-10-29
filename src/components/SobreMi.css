@@ -1,0 +1,48 @@
+.sobre-mi-section {
+  max-width: 750px; /* Ajusta el ancho total de la sección */
+  margin: 0 auto;   /* Centra horizontalmente */
+  padding: 0 1rem;  /* Espaciado lateral en pantallas pequeñas */
+}
+
+
+.sobre-mi-box {
+  background-color: #195796; /* Color suave de fondo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+/* Estilos para eliminar cualquier fondo no deseado en el contenido de Sobre Mi */
+.sobre-mi-contenido {
+  background-color: #195796; /* Fondo del recuadro interno */
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+
+/* Estilos para los títulos dentro de sobre-mi-box */
+.sobre-mi-box h4 {
+    background-color: #195796; /* Color suave de fondo */
+  color: #ffffff;
+}
+
+/* Estilos para los párrafos dentro de sobre-mi-box */
+.sobre-mi-box p {
+    background-color: #195796; /* Color suave de fondo */
+    color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+
+/* Columna que  contiene la imagen */
+.sobre-mi-imagen {
+  background-color: transparent; /* o el color que prefieras */
+}
+
+/* Columna que  contiene el texto */
+.sobre-mi-texto {
+  background-color: transparent; /* Elimina fondo blanco */
+}
