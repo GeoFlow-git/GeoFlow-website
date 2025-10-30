@@ -1,6 +1,7 @@
 import './Navbar.css'; // Puedes personalizar estilos aquí
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Componente para íconos
+import { faHouse } from '@fortawesome/free-solid-svg-icons'; // Ícono de casa
+import { Link } from 'react-router-dom'; // 👈 Importa Link para navegación sin recargar
 
 
 function Navbar() {
@@ -40,11 +41,12 @@ return (
 
 
                         
+                         {/* 🔹 ICONO HOME que lleva a la página principal */}
                         <li className="nav-item">
-                        <a className="nav-link icono-navbar" aria-current="page" href="#">
+                            <Link to="/" className="nav-link icono-navbar" aria-current="page">
                             <FontAwesomeIcon icon={faHouse} className="fa-icon me-2" />
-                            {/* Puedes dejar solo el ícono o agregar texto si lo deseas */}
-                        </a>
+                            {/* Si quieres puedes agregar texto: <span>Inicio</span> */}
+                            </Link>
                         </li>
 
 

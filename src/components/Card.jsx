@@ -15,6 +15,10 @@
 
 // export default Card;
 
+
+import { Link } from 'react-router-dom';
+
+
 function Card({ image, title, text, link }) {
   return (
     // h-100 para que todas las tarjetas tengan la misma altura 
@@ -24,7 +28,8 @@ function Card({ image, title, text, link }) {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{text}</p>
-        <a href={link} className="btn btn-primary">Ir al sitio</a>
+        <Link to={link} className="btn btn-primary">Ver más</Link>
+
       </div>
     </div>
   );

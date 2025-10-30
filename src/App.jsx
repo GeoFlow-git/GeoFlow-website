@@ -45,11 +45,10 @@ import { useState } from 'react';  // Hook de estado de React
 
 
 
-// Importa los componentes necesarios
-import TodoApp from './components/TodoApp';   // Importa el componente TodoApp
-import Dropdown  from './components/Dropdown';       // Importa el componente Card
-
-
+//------------ Importa los componentes necesarios----------
+//import TodoApp from './components/TodoApp';   // Importa el componente TodoApp
+//import Dropdown  from './components/Dropdown';       // Importa el componente Card
+// import { Dropdown } from 'bootstrap';
 import Card from './components/Card';       // Importa el componente Card
 import Navbar from './components/Navbar.jsx';  // Importa el componente Navbar
 import HeroSection from './components/HeroSection'; // Importa el Hero
@@ -61,100 +60,109 @@ import HeaderInfo from './components/HeaderInfo';
 import Tecnologias from './components/Tecnologias.jsx';
 
 
-//import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa los estilos de FontAwesome
-import './icons'; // Importa la configuración de los íconos de FontAwesome
+
+// ======= PÁGINAS =======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Pag_tuberias   from './page_1.jsx';
+//import Home from './pages/Home'; // o tu componente principal
 
 
 // Importa los estilos y scripts de Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de Bootstrap
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa los scripts de Bootstrap
+//import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa los estilos de FontAwesome
+import './icons'; // Importa la configuración de los íconos de FontAwesome
 
-// import { Dropdown } from 'bootstrap';
+
 
 
 
 // No es lenguaje HTML, es JSX (JavaScript XML)
+
+// ======= APLICACIÓN =======
 function App() {
+  const [mostrarMenu, setMostrarMenu] = useState(false);
 
-  const mi_empresa = 'GeoFlow';
-  const [mostrarMenu, setMostrarMenu] = useState(false);  // Estado para controlar la visibilidad del menú
-
-  const toggleMenu = () => {  // Función para alternar la visibilidad del menú
+  const toggleMenu = () => {
     setMostrarMenu(!mostrarMenu);
   };
 
-
   return (
-    <div>
-            <HeaderInfo />
-
-            <Navbar />      {/* Aquí va la barra de navegación */}
-            <HeroSection />  {/* Aquí va la Hero Section */}
-            <SobreMi />      {/* Aquí va la sección Sobre Mi */}
-            <Slider />      {/* Aquí va el slider */}
-
-      
-            
-            <Tecnologias />   {/* Aquí va la sección de Tecnologías */}
-
-
-      {/* <p>LoL</p>
-      <TodoApp />
-      <h1 className="Titulo">Mi primer curso</h1>
-      <h2 className="Nombre">{mi_empresa}</h2>
-      <h3 className="Nombre">{mi_empresa}</h3>
-      <h4 className="Nombre">{mi_empresa}</h4>
-      <input type="text" placeholder="Ingrese su nombre" />
-      <button>Enviar</button>
-      <Dropdown /> */}
-
-    <div className="container my-5">
-      <div className="row">
-        <div className="col-md-4 mb-4">
-          <Card
-            image="geothermal.jpg"
-            title="Energía Geotérmica"
-            text="Explora cómo la energía del subsuelo puede alimentar ciudades enteras."
-            link="https://es.wikipedia.org/wiki/Energ%C3%ADa_geot%C3%A9rmica"
-          />
-        </div>
-
-        <div className="col-md-4 mb-4">
-          <Card
-          
-            image="oil.jpg"
-            title="Oil and Gas"
-            text="Discover the latest advancements in oil and gas extraction technologies."
-            link="https://en.wikipedia.org/wiki/Oil_and_gas_industry"
-            
-          />
-        </div>
-
-        <div className="col-md-4 mb-4">
-          <Card
-            image="acuifero.jpg"
-            title="Manejo de acuiferos"
-            text="Aprovecha el poder del sol para generar electricidad limpia y renovable."
-            link="https://es.wikipedia.org/wiki/Energ%C3%ADa_solar"
-          />
-        </div>
-      </div>
-    </div>
 
 
 
+    <Router>
+
+      {/* 🧭 Header y Navbar visibles en todas las páginas */}
+      <HeaderInfo />
+      <Navbar />
 
 
-      <Servicios />
+      {/* 🧩 RUTAS */}
+      <Routes>
 
+
+        {/* Página principal */}
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSection />
+              <SobreMi />
+              <Slider />
+              <Tecnologias />
+
+              <div className="container my-5">
+                <div className="row">
+                  <div className="col-md-4 mb-4">
+                    <Card
+                      image="geothermal.jpg"
+                      title="Energía Geotérmica"
+                      text="Explora cómo la energía del subsuelo puede alimentar ciudades enteras."
+                      link="/Pag_tuberias"
+                    />
+                  </div>
+
+                  <div className="col-md-4 mb-4">
+                    <Card
+                      image="oil.jpg"
+                      title="Oil and Gas"
+                      text="Discover the latest advancements in oil and gas extraction technologies."
+                      link="/Pag_tuberias"
+                    />
+                  </div>
+
+                  <div className="col-md-4 mb-4">
+                    <Card
+                      image="acuifero.jpg"
+                      title="Manejo de acuíferos"
+                      text="Aprovecha el poder del sol para generar electricidad limpia y renovable."
+                      link="/Pag_tuberias"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Servicios />
+            </>
+          }
+        />
+
+
+
+        {/* Página interna */}
+        <Route path="/Pag_tuberias" element={<Pag_tuberias />} />
+      </Routes>
+
+
+
+
+
+      {/* 🧭 🦶 Footer  visibles en todas las páginas */}
       <Footer />
 
 
-
-
-
-
-    </div>
+    </Router>
   );
 }
 
