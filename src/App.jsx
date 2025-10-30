@@ -91,7 +91,7 @@ function App() {
 
 
 
-    <Router>
+    <Router basename="/GeoFlow-website">  {/* Configura el enrutador con la base correcta */}
 
       {/* 🧭 Header y Navbar visibles en todas las páginas */}
       <HeaderInfo />
