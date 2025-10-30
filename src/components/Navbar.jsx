@@ -43,7 +43,7 @@ return (
                         
                          {/* 🔹 ICONO HOME que lleva a la página principal */}
                         <li className="nav-item">
-                            <Link to={`${import.meta.env.BASE_URL}`}  className="nav-link icono-navbar" aria-current="page">
+                            <Link to="/" className="nav-link icono-navbar" aria-current="page">
                             <FontAwesomeIcon icon={faHouse} className="fa-icon me-2" />
                             {/* Si quieres puedes agregar texto: <span>Inicio</span> */}
                             </Link>

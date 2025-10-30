@@ -2,6 +2,8 @@
 import './HeaderInfo.css';
 
 function HeaderInfo() {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
   <header className="header-info">
 
@@ -10,14 +12,14 @@ function HeaderInfo() {
           {/* Logos alineados a la izquierda */}
           <div className="d-flex align-items-center logos">
             <img
-              src="Logo_letras.png"
+              src={`${basePath}${"Logo_letras.png"}`} 
               alt="GeoFlow Logo"
               width="200"
               height="75"
               className="me-3"
             />
             <img
-              src="logo_hero.png"
+              src={`${basePath}${"logo_hero.png"}`}  
               alt="GeoFlow Icon"
               width="75"
               height="75"
