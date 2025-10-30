@@ -2,6 +2,9 @@ import React from 'react';
 import './Slider.css';
 
 function Slider() {
+
+  const basePath = import.meta.env.BASE_URL;
+
   return (
 
     /* Contenedor del slider para centrarlo y limitar su ancho */
@@ -15,7 +18,7 @@ function Slider() {
 
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="geothermal_2.jpg" className="d-block w-100" alt="Energía Geotérmica"  />
+              <img src={`${basePath}${"geothermal_2.jpg"}`} className="d-block w-100" alt="Energía Geotérmica"  />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Energía Geotérmica</h5>
                 <p>Explora cómo la energía del subsuelo puede alimentar ciudades enteras.</p>
@@ -23,7 +26,7 @@ function Slider() {
             </div>
 
             <div className="carousel-item">
-              <img src="oil_2.jpg" className="d-block w-100" alt="Oil and Gas"  />
+              <img src={`${basePath}${"oil_2.jpg"}`} className="d-block w-100" alt="Oil and Gas"  />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Oil and Gas</h5>
                 <p>Avances en tecnologías de extracción de petróleo y gas.</p>
@@ -31,7 +34,7 @@ function Slider() {
             </div>
 
             <div className="carousel-item">
-              <img src="aquifer_2.png" className="d-block w-100" alt="Manejo de acuíferos"  />
+              <img src={`${basePath}${"aquifer_2.png"}`}  className="d-block w-100" alt="Manejo de acuíferos"  />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Manejo de acuíferos</h5>
                 <p>Gestión sostenible de recursos hídricos subterráneos.</p>

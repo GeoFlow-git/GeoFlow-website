@@ -1,6 +1,9 @@
 import './SobreMi.css';
 
 function SobreMi() {
+
+  const basePath = import.meta.env.BASE_URL;
+
   return (
 
     <section id="sobre-mi" className="sobre-mi-section my-5">
@@ -26,7 +29,7 @@ function SobreMi() {
 
           <div className="col-md-5 text-center px-3 sobre-mi-imagen">
             <img
-              src="Foto.jpg"
+              src={`${basePath}${"Foto.jpg"}`} 
               alt="Luis"
               className="img-fluid rounded-circle"
               style={{ width: '250px', height: '250px', objectFit: 'cover' }}

@@ -20,6 +20,9 @@ import React from 'react';
 import './HeroSection.css'; // Puedes personalizar estilos aquí
 
 function HeroSection() {
+
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <section className="hero-section py-5 bg-light">
       <div className="container">
@@ -41,7 +44,7 @@ function HeroSection() {
            {/* ms-auto para empujar la imagen a la derecha */}
           <div className="col-md-5 text-center ms-auto"> {/* Aqui se ajusa el tamaño de la columna */}
             <img
-              src="reservoir.png"
+              src={`${basePath}${"reservoir.png"}`} 
               alt="Energía geotérmica"
               className="img-fluid rounded"
               /* 600px de altura máxima y cover para que la imagen cubra el espacio */

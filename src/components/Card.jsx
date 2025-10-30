@@ -20,11 +20,14 @@ import { Link } from 'react-router-dom';
 
 
 function Card({ image, title, text, link }) {
+
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     // h-100 para que todas las tarjetas tengan la misma altura 
     // widht ajusta el ancho de la tarjeta 
     <div className="card h-100" style={{ width: '20rem' }}> 
-      <img src={image} className="card-img-top" alt={title} style={{ height: '200px', objectFit: 'cover' }} />
+      <img src={`${basePath}${image}`} className="card-img-top" alt={title} style={{ height: '200px', objectFit: 'cover' }} />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{text}</p>
