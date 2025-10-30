@@ -29,7 +29,7 @@ function HeroSection() {
           {/* Texto a la izquierda */}
           <div className="col-md-5 text-center text-md-start ms-auto"> {/* Aqui se ajusta el tamaño de la columna */}
             {/* display para tamaño grande, fw-bold para negrita */}
-            <h1 className="display-4 fw-bold">LOL Simulación numérica para un futuro sostenible.</h1>
+            <h1 className="display-4 fw-bold">Doble LOL Simulación numérica para un futuro sostenible.</h1>
             <p className="lead">Ayudamos a empresas del sector energético y ambiental a entender el subsuelo 
               con simulaciones precisas y visualizaciones claras. Desde petróleo y gas hasta acuíferos y 
               geotermia, convertimos datos en decisiones.</p>
