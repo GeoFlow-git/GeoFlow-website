@@ -1,14 +1,11 @@
-
 //  "homepage": "https://GeoFlow-git.github.io/GeoFlow-website/",
-
-
 
 // import { useState } from 'react'          // Hook de estado de React
 // import reactLogo from './assets/react.svg'  // Logo de React
 // import viteLogo from '/vite.svg'            // Logo de Vite
 // import './App.css'                     // Estilos de la aplicación
 
-// function App() {           // Componente funcional principal de la aplicación            
+// function App() {           // Componente funcional principal de la aplicación
 //   const [count, setCount] = useState(0)
 
 //   return (     // Fragmento JSX que define la estructura de la interfaz de usuario
@@ -39,43 +36,35 @@
 
 // export default App
 
-
 //import './App.css'; // Estilos de la aplicación
-import { useState } from 'react';  // Hook de estado de React
-
-
+import { useState } from "react"; // Hook de estado de React
 
 //------------ Importa los componentes necesarios----------
 //import TodoApp from './components/TodoApp';   // Importa el componente TodoApp
 //import Dropdown  from './components/Dropdown';       // Importa el componente Card
 // import { Dropdown } from 'bootstrap';
-import Card from './components/Card';       // Importa el componente Card
-import Navbar from './components/Navbar.jsx';  // Importa el componente Navbar
-import HeroSection from './components/HeroSection'; // Importa el Hero
-import Slider from './components/slider'; // Importa el slider
-import Footer from './components/footer'; // Importa el Footer
-import Servicios from './components/Servicios';   // Importa el componente Servicios
-import SobreMi from './components/SobreMi';   // Importa el componente SobreMi
-import HeaderInfo from './components/HeaderInfo';
-import Tecnologias from './components/Tecnologias.jsx';
-
-
+import Card from "./components/Card"; // Importa el componente Card
+import Navbar from "./components/Navbar.jsx"; // Importa el componente Navbar
+import HeroSection from "./components/HeroSection"; // Importa el Hero
+import Slider from "./components/slider"; // Importa el slider
+import Footer from "./components/footer"; // Importa el Footer
+import Servicios from "./components/Servicios"; // Importa el componente Servicios
+import SobreMi from "./components/SobreMi"; // Importa el componente SobreMi
+import HeaderInfo from "./components/HeaderInfo";
+import Tecnologias from "./components/Tecnologias.jsx";
 
 // ======= PÁGINAS =======
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Pag_tuberias   from './page_1.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Pag_tuberias from "./Pages/page_1.jsx";
+import Register from "./Pages/Register.jsx";
+
 //import Home from './pages/Home'; // o tu componente principal
 
-
 // Importa los estilos y scripts de Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de Bootstrap
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa los scripts de Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css"; // Importa los estilos de Bootstrap
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Importa los scripts de Bootstrap
 //import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa los estilos de FontAwesome
-import './icons'; // Importa la configuración de los íconos de FontAwesome
-
-
-
-
+import "./icons"; // Importa la configuración de los íconos de FontAwesome
 
 // No es lenguaje HTML, es JSX (JavaScript XML)
 
@@ -88,20 +77,14 @@ function App() {
   };
 
   return (
-
-
-
-    <Router basename="/GeoFlow-website">  {/* Configura el enrutador con la base correcta */}
-
+    <Router basename="/GeoFlow-website">
+      {" "}
+      {/* Configura el enrutador con la base correcta */}
       {/* 🧭 Header y Navbar visibles en todas las páginas */}
       <HeaderInfo />
       <Navbar />
-
-
       {/* 🧩 RUTAS */}
       <Routes>
-
-
         {/* Página principal */}
         <Route
           path="/"
@@ -148,20 +131,12 @@ function App() {
           }
         />
 
-
-
-        {/* Página interna */}
+        {/* Páginas internas */}
         <Route path="/Pag_tuberias" element={<Pag_tuberias />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-
-
-
-
-
       {/* 🧭 🦶 Footer  visibles en todas las páginas */}
       <Footer />
-
-
     </Router>
   );
 }
