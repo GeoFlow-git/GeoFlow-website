@@ -1,4 +1,4 @@
-.register-container {
+.Iniciar-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,16 +6,16 @@
   background-color: #f8f9fa; /* gris claro */
 }
 
-.register-card {
+.Iniciar-card {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 200%;
   max-width: 400px;
 }
 
-.register-card h2 {
+.Iniciar-card h2 {
   color: #007bff; /* azul bootstrap */
   font-weight: bold;
 }
@@ -29,3 +29,4 @@
 .small-link:hover {
   text-decoration: underline;
 }
+

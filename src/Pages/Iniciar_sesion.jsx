@@ -1,16 +1,23 @@
+// src/pages/Iniciar_sesion.jsx
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Register.css"; // puedes crear este archivo para personalizar estilos
+import { Link, useNavigate } from "react-router-dom";
+import "./Iniciar_sesion.css"; // Archivo para estilos del formulario
+import { loginUser } from "../utils/auth"; // Función para login
 
-function Register() {
-  // Estado local para manejar los campos del formulario
+function Iniciar_sesion() {
+  const navigate = useNavigate();
+
+  // Estado para manejar campos del formulario
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     remember: false,
   });
 
-  // Maneja los cambios de los inputs
+  // Estado para mostrar errores
+  const [error, setError] = useState("");
+
+  // Maneja cambios en los inputs
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -19,16 +26,29 @@ function Register() {
     });
   };
 
-  // Envía el formulario (por ahora solo muestra los datos en consola)
-  const handleSubmit = (e) => {
+  // Envía el formulario
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Datos del formulario:", formData);
-    alert(`Usuario registrado: ${formData.username}`);
+    try {
+      const data = await loginUser(formData.username, formData.password);
+
+      // Guardar token y username en localStorage
+      localStorage.setItem("token", data.access_token);
+      localStorage.setItem("username", formData.username);
+
+      // Alerta de éxito
+      alert("Inicio de sesión exitoso");
+
+      // Redirigir a página principal
+      navigate("/");
+    } catch (err) {
+      setError(err.message); // Mostrar error en pantalla
+    }
   };
 
   return (
-    <div className="register-container">
-      <div className="register-card">
+    <div className="Iniciar-container">
+      <div className="Iniciar-card">
         <h2 className="text-center mb-4">Iniciar sesión</h2>
 
         <form onSubmit={handleSubmit}>
@@ -79,16 +99,19 @@ function Register() {
             </label>
           </div>
 
-          {/* Botón de registro */}
+          {/* Botón de login */}
           <button type="submit" className="btn btn-primary w-100">
-            Registrarse
+            Iniciar sesión
           </button>
         </form>
 
+        {/* Mostrar mensaje de error */}
+        {error && <p className="mt-3 text-center text-danger">{error}</p>}
+
         {/* Enlaces de ayuda */}
         <div className="text-center mt-3">
-          <Link to="/login" className="small-link">
-            ¿No tiened una cuenta? Registrate
+          <Link to="/register" className="small-link">
+            ¿No tienes una cuenta? Regístrate
           </Link>
           <br />
           <Link to="/forgot-password" className="small-link">
@@ -100,4 +123,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Iniciar_sesion;

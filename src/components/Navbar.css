@@ -2,111 +2,187 @@
    NAVBAR.CSS – Estilos personalizados para la barra de navegación
    ============================================================ */
 
-
-/* ------------------------------------------------------------
-   1. ESTILOS GENERALES DE LA NAVBAR
-   ------------------------------------------------------------ */
-
-/* Barra principal de navegación */
+/* 1. ESTILOS GENERALES DE LA NAVBAR */
 .custom-navbar {
-  background-color: #414141;         /* Color de fondo (gris oscuro) */
-  padding: 1rem 5rem;                /* Espaciado interno: vertical y horizontal */
-  position: sticky;                  /* Fija la barra al hacer scroll */
-  top: 0;                            /* Posición superior */
-  z-index: 1000;                     /* Prioridad sobre otros elementos */
+  background-color: #414141;       /* Color de fondo principal */
+  padding: 1rem 5rem;              /* Espaciado interno */
+  position: sticky;                /* Fija la barra al hacer scroll */
+  top: 0;
+  z-index: 1000;
 }
 
-/* Contenedor interno de la navbar */
 .custom-container {
-  background-color: transparent;     /* Fondo transparente para mantener consistencia */
+  background-color: transparent;   /* Fondo transparente */
 }
 
-/* Sección colapsable (visible en pantallas pequeñas) */
 .custom-navbar-collapse {
-  justify-content: flex-end;         /* Alinea los elementos a la derecha */
-  background-color: transparent;     /* Fondo transparente */
-  padding: 0.1rem;                   /* Espaciado interno mínimo */
-  font-size: 1.5rem;                 /* Tamaño base de fuente */
-  color: #ffffff;                    /* Color de texto (blanco) */
+  justify-content: flex-end;       /* Elementos a la derecha */
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 
-/* ------------------------------------------------------------
-   2. ENLACES DE NAVEGACIÓN
-   ------------------------------------------------------------ */
+.custom-nav-list {
+  justify-content: flex-end;       /* Elementos a la derecha */
+  background-color: transparent;
+  font-size: 1.5rem;
 
-/* Estilo base de los enlaces (texto del menú) */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 0px;             /* espacio entre botones */
+  list-style: none;           /* quita las viñetas */
+  text-transform: uppercase;  /* texto en mayúsculas */
+  background-color: transparent;
+
+}
+
+
+
+
+/* //////////////    ICONO DE CASA    /////////////// */
+
+a.nav-link.icono-navbar {
+  background-color:transparent;   /* Fondo verde oscuro (puedes cambiarlo) */
+  border-radius: 0%;          /* Hace el fondo circular */
+  display: inline-flex;        /* Alinea correctamente el SVG */
+  align-items: center;         /* Centra verticalmente el ícono */
+  justify-content: center;     /* Centra horizontalmente */
+  /* width: 40px;                 /* Tamaño del contenedor */
+  /* height: 40px;                Tamaño del contenedor */ 
+  padding: 0;                  /* Quita padding extra de Bootstrap */
+  margin: 0;                   /* Quita márgenes */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ícono dentro del enlace */
+a.nav-link.icono-navbar svg,
+a.nav-link.icono-navbar svg path {
+  width: 20px;
+  height: 20px;
+  color: inherit;       /* hereda el color del enlace */
+  fill: currentColor;   /* rellena con el color actual */
+  transition: fill 0.3s, color 0.3s;
+  background: transparent;
+}
+
+
+/* Hover (se aplica cuando el cursor está encima) */
+a.nav-link.icono-navbar:hover,
+a.nav-link.icono-navbar:focus:hover { /* incluye el caso en que está enfocado y pasas el mouse */
+  color: #00d9ff;
+  fill: #00d9ff;
+}
+
+
+
+/* //////////////    ENLACES    /////////////// */
+
+
 .custom-navbar .nav-link {
-  background-color: #414141;         /* Fondo igual al de la barra */
-  margin-right: 0;                   /* Sin espacio entre enlaces */
-  font-family: 'Segoe UI', sans-serif; /* Fuente legible y moderna */
-  font-size: 1rem;                   /* Tamaño de texto */
-  font-weight: 500;                  /* Grosor medio */
-  color: #ffffff;                    /* Color blanco por defecto */
-  text-transform: uppercase;         /* Convierte el texto a mayúsculas */
-  text-decoration: none;             /* Elimina subrayado */
-  transition: color 0.25s ease;      /* Transición suave de color */
-}
-
-/* Efecto hover sobre enlaces */
-.custom-navbar .nav-link:hover {
-  background-color: transparent;     /* Sin cambio de fondo */
-  color: #2600ff;                    /* Azul brillante al pasar el cursor */
-}
-
-
-/* ------------------------------------------------------------
-   3. ICONOS EN LA NAVBAR
-   ------------------------------------------------------------ */
-
-/* Contenedor del ícono dentro del enlace */
-.icono-navbar {
-  display: inline-flex;               /* Alinea ícono y texto en fila */
-  align-items: center;                /* Centra verticalmente el ícono */
-  gap: 8px;                           /* Espacio entre ícono y texto */
-  color: #ffffff;                     /* Color inicial (texto + ícono en blanco) */
-  background-color: #225a3e;          /* Fondo verde oscuro detrás del ícono */
-  font-size: 1.2rem;                  /* Tamaño ligeramente mayor */
-  padding: 6px 10px;                  /* Espaciado interno */
-  text-decoration: none;              /* Sin subrayado */
-  transition: color 0.25s ease, 
-              background-color 0.25s ease; /* Transiciones suaves */
-}
-
-/* El ícono (SVG) hereda el color del enlace padre */
-.icono-navbar .fa-icon,
-.icono-navbar svg {
-  color: inherit;                     /* Usa el mismo color que el contenedor */
-  fill: currentColor;                 /* Rellena según el color actual */
-  background: transparent;            /* Sin fondo */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
   transition: color 0.25s ease;
 }
 
-/* Color inicial del ícono (asegura blanco incluso si Bootstrap sobrescribe) */
-.icono-navbar .fa-icon,
-.icono-navbar svg,
-.icono-navbar svg path {
-  color: #ffffff !important;          /* Ícono blanco */
-  fill: #ffffff !important;           /* Relleno blanco */
-  stroke: #ffffff !important;         /* Contorno blanco */
+
+.custom-navbar .nav-link:hover {
+  color: #00aeff;
 }
 
 
-/* ------------------------------------------------------------
-   4. EFECTOS HOVER DEL ÍCONO
-   ------------------------------------------------------------ */
 
-/* Cambios de color al pasar el cursor */
-.icono-navbar:hover {
-  color: #2600ff;                     /* Cambia texto e ícono a azul */
-  background-color: #ffffff;          /* Fondo pasa a blanco */
+/* //////////    ICONO DE PERFIL////////////// */
+
+
+/* Selecciona el <span> que abre el menú desplegable */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle {
+  background-color: transparent;       /* Fondo (ajústalo a gusto) */
+  color: #ffffff;                  /* Color del ícono */
+  border-radius: 50%;              /* Forma circular */
+  width: 40px;                     /* Tamaño horizontal */
+  height: 40px;                    /* Tamaño vertical */
+  display: flex;                   /* Centra contenido */
+  align-items: center;
+  justify-content: center;
+  padding: 0;                      /* Quita padding de Bootstrap */
+  margin: 0;                       /* Quita márgenes */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Asegura que los paths internos del SVG cambien también */
-.icono-navbar:hover .fa-icon,
-.icono-navbar:hover svg,
-.icono-navbar:hover svg path {
-  color: #2600ff !important;          /* Aplica azul a todos los niveles del ícono */
-  fill: #2600ff !important;
-  stroke: #2600ff !important;
+
+/* Ícono SVG dentro del botón de perfil */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle svg,
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle svg path {
+  width: 20px;
+  height: 20px;
+  color: inherit;                     /* Hereda color del elemento padre */
+  fill: currentColor;                 /* Rellena con el color actual */
+  background: transparent;
+  transition: fill 0.3s, color 0.3s;
 }
+
+
+/* Icono dentro del span */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle svg {
+    color: inherit;                     /* hereda el color del contenedor */
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+/* Hover: cambia color del ícono y fondo si lo deseas */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle:hover {
+  color: #00d9ff;                     /* Color del ícono al pasar el mouse */
+  background-color: transparent;      /* Mantén transparente o usa otro color */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////// */
+
+
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  background-color: transparent; /* fondo del dropdown */
+  border: none;
+  min-width: 180px;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item {
+  color: #ffffff;
+  background-color: rgb(7, 88, 38);
+  transition: background-color 0.25s;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item:hover {
+  background-color: #225a3e;
+  color: #ffffff;
+}
+
+
+/*----------------------------------------*/
+
+.nombre-usuario {
+  color: #ffffff;           /* blanco como el resto de la navbar */
+  background-color: transparent;
+  font-size: 1rem;        /* tamaño moderado */
+  font-weight: 600;
+  margin-left: 1px;         /* espacio entre icono y texto */
+  transition: color 0.3s;
+}
+
+

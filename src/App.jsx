@@ -1,41 +1,3 @@
-//  "homepage": "https://GeoFlow-git.github.io/GeoFlow-website/",
-
-// import { useState } from 'react'          // Hook de estado de React
-// import reactLogo from './assets/react.svg'  // Logo de React
-// import viteLogo from '/vite.svg'            // Logo de Vite
-// import './App.css'                     // Estilos de la aplicación
-
-// function App() {           // Componente funcional principal de la aplicación
-//   const [count, setCount] = useState(0)
-
-//   return (     // Fragmento JSX que define la estructura de la interfaz de usuario
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
-
 //import './App.css'; // Estilos de la aplicación
 import { useState } from "react"; // Hook de estado de React
 
@@ -56,8 +18,8 @@ import Tecnologias from "./components/Tecnologias.jsx";
 // ======= PÁGINAS =======
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pag_tuberias from "./Pages/page_1.jsx";
-import Register from "./Pages/Register.jsx";
-
+import Iniciar_sesion from "./Pages/Iniciar_sesion.jsx";
+//import Register from "./Register"; // si luego agregas registro
 //import Home from './pages/Home'; // o tu componente principal
 
 // Importa los estilos y scripts de Bootstrap
@@ -133,7 +95,7 @@ function App() {
 
         {/* Páginas internas */}
         <Route path="/Pag_tuberias" element={<Pag_tuberias />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/Iniciar_sesion" element={<Iniciar_sesion />} />
       </Routes>
       {/* 🧭 🦶 Footer  visibles en todas las páginas */}
       <Footer />
