@@ -1,0 +1,58 @@
+/* Register.css */
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f5f7fa;
+}
+
+.register-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  color: #0077b6;
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-check-label a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.small-link {
+  font-size: 0.9rem;
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.small-link:hover {
+  text-decoration: underline;
+}
+
+button.btn-primary {
+  background-color: #0077b6;
+  border-color: #0077b6;
+}
+
+button.btn-primary:hover {
+  background-color: #0096c7;
+  border-color: #0096c7;
+}

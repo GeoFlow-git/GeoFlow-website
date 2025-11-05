@@ -1,0 +1,29 @@
+.slider-section {
+  background-color: #f8f9fa; /* gris claro */
+}
+
+.our-mission-section {
+  /* background-color: #003366; /*  
+  color: white; */
+    margin-top: 4rem;
+  margin-bottom: 4rem;
+  /* o si quieres espacio interno */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.Sobre_mi-section {
+  /* background-color: #003366; /*  
+  color: white; */
+    margin-top: 1rem;
+  margin-bottom: 5rem;
+  /* o si quieres espacio interno */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+.section-transition {
+  background: linear-gradient(to bottom, #003366 0%, #00bfa6 100%);
+  height: 80px;
+}

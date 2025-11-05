@@ -69,16 +69,16 @@ button:focus-visible {
 
 
 
-
 * {
   margin: 5;        /* Márgenes externos */  
   /* padding: 10;      /* Espaciado interno */
   box-sizing: border-box;  /* Incluye el padding y el border en el tamaño total del elemento */ 
   background-color: rgb(255, 255, 255);
+  /* background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 100%); */
+  
   color: rgb(0, 0, 0); 
   font-family: 'Times New Roman', Times, serif;
 }
-
 
 
 

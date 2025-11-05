@@ -1,23 +1,29 @@
-// Navbar.jsx
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
-import { isLoggedIn } from "../utils/auth";
+import { logout } from "../utils/auth";
 
 function Navbar() {
   const navigate = useNavigate();
+  const [username, setUsername] = useState(localStorage.getItem("username"));
 
-  // Revisar si hay usuario logueado y obtener su nombre
-  const logged = isLoggedIn();
-  const username = logged ? localStorage.getItem("username") : null;
+  // Actualiza el username si cambia localStorage (registro o login)
+  useEffect(() => {
+    const handleStorageChange = () =>
+      setUsername(localStorage.getItem("username"));
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
-  // Función para cerrar sesión
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("username");
+    logout();
+    setUsername(null);
     navigate("/Iniciar_sesion");
   };
+
+  const logged = !!username;
 
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
@@ -27,7 +33,6 @@ function Navbar() {
           id="navbarNav"
         >
           <ul className="navbar-nav custom-nav-list">
-            {/* ICONO HOME */}
             <li className="nav-item">
               <Link
                 to="/"
@@ -37,8 +42,6 @@ function Navbar() {
                 <FontAwesomeIcon icon={faHouse} />
               </Link>
             </li>
-
-            {/* ENLACES GENERALES */}
             <li className="nav-item">
               <a className="nav-link" href="#sobre-mi">
                 Sobre mí
@@ -49,10 +52,19 @@ function Navbar() {
                 Servicios
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#Sectores">
+                Sectores
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#Tecnologias">
+                Tecnologias
+              </a>
+            </li>
 
-            {/* ICONO PERFIL + DROPDOWN */}
+            {/* Icono Perfil + Dropdown */}
             <li className="nav-item dropdown ms-3 d-flex align-items-center">
-              {/* ICONO DE PERFIL (dispara dropdown) */}
               <span
                 className="nav-link dropdown-toggle"
                 role="button"
@@ -63,37 +75,29 @@ function Navbar() {
                 <FontAwesomeIcon icon={faUser} />
               </span>
 
-              {/* NOMBRE DE USUARIO */}
-              {isLoggedIn() && (
-                <span className="nombre-usuario ms-2">
-                  {localStorage.getItem("username")}
-                </span>
+              {logged && (
+                <span className="nombre-usuario ms-2">{username}</span>
               )}
 
-              {/* DROPDOWN */}
               <ul className="dropdown-menu dropdown-menu-end">
-                {!isLoggedIn() && (
+                {!logged && (
                   <li>
                     <Link className="dropdown-item" to="/Iniciar_sesion">
                       Iniciar sesión
                     </Link>
                   </li>
                 )}
-                {isLoggedIn() && (
+                {logged && (
                   <>
                     <li>
-                      <Link className="dropdown-item" to="/perfil">
+                      <Link className="dropdown-item" to="/Perfil">
                         Mi perfil
                       </Link>
                     </li>
                     <li>
                       <span
                         className="dropdown-item"
-                        onClick={() => {
-                          localStorage.removeItem("token");
-                          localStorage.removeItem("username");
-                          window.location.reload();
-                        }}
+                        onClick={handleLogout}
                         style={{ cursor: "pointer" }}
                       >
                         Cerrar sesión

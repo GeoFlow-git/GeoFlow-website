@@ -1,9 +1,39 @@
+
+
+
+
+.texto {
+  background-color: rgb(255, 255, 255);
+  color: #0099ff; /* Azul petróleo */
+}
+
 .hero-section h1 {
   background-color: rgb(255, 255, 255);
   color: #0099ff; /* Azul petróleo */
+  margin-bottom: 3rem;
 }
 
 .hero-section p {
   background-color: rgb(255, 255, 255);
   color: #000000; /* Verde azulado */
+  
+}
+
+.hero-img {
+  transition: transform 1.0s ease, opacity 1s ease;
+  transform: scale(1.4);
+  opacity: 0.5;
+}
+
+/* Cuando entra en pantalla */
+.hero-img.zoom-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Transición suave para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero-img.zoom-in {
+    transform: scale(1.03);
+  }
 }

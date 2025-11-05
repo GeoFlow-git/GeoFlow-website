@@ -8,25 +8,34 @@ import { useState } from "react"; // Hook de estado de React
 import Card from "./components/Card"; // Importa el componente Card
 import Navbar from "./components/Navbar.jsx"; // Importa el componente Navbar
 import HeroSection from "./components/HeroSection"; // Importa el Hero
-import Slider from "./components/slider"; // Importa el slider
+import Sectores from "./components/Sectores"; // Importa  Sectores
 import Footer from "./components/footer"; // Importa el Footer
-import Servicios from "./components/Servicios"; // Importa el componente Servicios
+//import Servicios from "./components/Servicios"; // Importa el componente Servicios
 import SobreMi from "./components/SobreMi"; // Importa el componente SobreMi
 import HeaderInfo from "./components/HeaderInfo";
 import Tecnologias from "./components/Tecnologias.jsx";
+//import ServicioAnimado from "./components/ServicioAnimado.jsx";
+import OurMision from "./components/OurMision";
+import ServicioPanel from "./components/ServicioPanel";
+import Publicaciones from "./components/Publicaciones";
 
 // ======= PÁGINAS =======
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pag_tuberias from "./Pages/page_1.jsx";
 import Iniciar_sesion from "./Pages/Iniciar_sesion.jsx";
-//import Register from "./Register"; // si luego agregas registro
-//import Home from './pages/Home'; // o tu componente principal
+import Register from "./Pages/Register.jsx";
+import Perfil from "./Pages/Perfil.jsx";
 
 // Importa los estilos y scripts de Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"; // Importa los estilos de Bootstrap
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Importa los scripts de Bootstrap
 //import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa los estilos de FontAwesome
 import "./icons"; // Importa la configuración de los íconos de FontAwesome
+import "./App.css";
+import "./components/section.css";
+import { motion } from "framer-motion";
+//   Importaok frame motion para animaciones
+//import { motion } from "framer-motion";
 
 // No es lenguaje HTML, es JSX (JavaScript XML)
 
@@ -53,42 +62,40 @@ function App() {
           element={
             <>
               <HeroSection />
-              <SobreMi />
-              <Slider />
-              <Tecnologias />
 
-              <div className="container my-5">
-                <div className="row">
-                  <div className="col-md-4 mb-4">
-                    <Card
-                      image="geothermal.jpg"
-                      title="Energía Geotérmica"
-                      text="Explora cómo la energía del subsuelo puede alimentar ciudades enteras."
-                      link="/Pag_tuberias"
-                    />
-                  </div>
-
-                  <div className="col-md-4 mb-4">
-                    <Card
-                      image="oil.jpg"
-                      title="Oil and Gas"
-                      text="Discover the latest advancements in oil and gas extraction technologies."
-                      link="/Pag_tuberias"
-                    />
-                  </div>
-
-                  <div className="col-md-4 mb-4">
-                    <Card
-                      image="acuifero.jpg"
-                      title="Manejo de acuíferos"
-                      text="Aprovecha el poder del sol para generar electricidad limpia y renovable."
-                      link="/Pag_tuberias"
-                    />
-                  </div>
-                </div>
+              <div className="our-mission-section">
+                <OurMision />
+              </div>
+              <div className="Sobre_mi-section">
+                <SobreMi />
               </div>
 
-              <Servicios />
+              {/* <div className="section-transition"></div> */}
+
+              {/* <ServicioAnimado /> */}
+              <ServicioPanel />
+
+              <svg viewBox="0 0 1440 100" class="svg-separator">
+                <path
+                  fill="#003366"
+                  d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"
+                ></path>
+              </svg>
+              <div className="Sectores-section">
+                <Sectores />
+              </div>
+
+              <svg viewBox="0 0 1440 100" class="svg-separator flipped">
+                <path
+                  fill="#003366"
+                  d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"
+                  transform="scale(-1, -1) translate(-1440, -100)"
+                ></path>
+              </svg>
+
+              <Tecnologias />
+              <div className="section-transition"></div>
+              <Publicaciones />
             </>
           }
         />
@@ -96,6 +103,8 @@ function App() {
         {/* Páginas internas */}
         <Route path="/Pag_tuberias" element={<Pag_tuberias />} />
         <Route path="/Iniciar_sesion" element={<Iniciar_sesion />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/Perfil" element={<Perfil />} />
       </Routes>
       {/* 🧭 🦶 Footer  visibles en todas las páginas */}
       <Footer />

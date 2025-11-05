@@ -1,48 +1,35 @@
-// src/pages/Iniciar_sesion.jsx
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Iniciar_sesion.css"; // Archivo para estilos del formulario
-import { loginUser } from "../utils/auth"; // Función para login
+import "./Iniciar_sesion.css";
+import { loginUser } from "../utils/auth";
 
 function Iniciar_sesion() {
   const navigate = useNavigate();
-
-  // Estado para manejar campos del formulario
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     remember: false,
   });
-
-  // Estado para mostrar errores
   const [error, setError] = useState("");
 
-  // Maneja cambios en los inputs
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
-  // Envía el formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const data = await loginUser(formData.username, formData.password);
 
-      // Guardar token y username en localStorage
-      localStorage.setItem("token", data.access_token);
+      // Guardar username en localStorage para Navbar
       localStorage.setItem("username", formData.username);
 
-      // Alerta de éxito
-      alert("Inicio de sesión exitoso");
-
-      // Redirigir a página principal
+      // Redirigir a home y actualizar Navbar
       navigate("/");
+      window.dispatchEvent(new Event("storage"));
     } catch (err) {
-      setError(err.message); // Mostrar error en pantalla
+      setError(err.message);
     }
   };
 
@@ -52,7 +39,6 @@ function Iniciar_sesion() {
         <h2 className="text-center mb-4">Iniciar sesión</h2>
 
         <form onSubmit={handleSubmit}>
-          {/* Usuario */}
           <div className="mb-3">
             <label htmlFor="username" className="form-label">
               Usuario
@@ -68,7 +54,6 @@ function Iniciar_sesion() {
             />
           </div>
 
-          {/* Contraseña */}
           <div className="mb-3">
             <label htmlFor="password" className="form-label">
               Contraseña
@@ -84,7 +69,6 @@ function Iniciar_sesion() {
             />
           </div>
 
-          {/* Recordarme */}
           <div className="mb-3 form-check">
             <input
               type="checkbox"
@@ -99,16 +83,13 @@ function Iniciar_sesion() {
             </label>
           </div>
 
-          {/* Botón de login */}
           <button type="submit" className="btn btn-primary w-100">
             Iniciar sesión
           </button>
         </form>
 
-        {/* Mostrar mensaje de error */}
         {error && <p className="mt-3 text-center text-danger">{error}</p>}
 
-        {/* Enlaces de ayuda */}
         <div className="text-center mt-3">
           <Link to="/register" className="small-link">
             ¿No tienes una cuenta? Regístrate

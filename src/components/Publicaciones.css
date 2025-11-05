@@ -1,0 +1,47 @@
+.publicaciones-section {
+  background-color: #f9fafc;
+}
+
+.anio-titulo {
+  color: #006a8e; /* Azul turquesa corporativo */
+  border-left: 4px solid #00aaff;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.publication-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portada-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.btn-primary {
+  background-color: #0077b6;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0096c7;
+}

@@ -1,6 +1,6 @@
-/* Slider.css */
+/* Sectores.css */
 
-#geoSlider {
+#geoSectores {
   border-radius: 8px;  /* Bordes redondeados */
   overflow: hidden;     /* Oculta cualquier desbordamiento */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);   /* Sombra para dar profundidad */
@@ -8,8 +8,37 @@
   
 }
 
-/* Contenedor para centrar el slider y limitar su ancho */
-.slider-wrapper {
+
+.Sectores-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007a8c; /* tono turquesa elegante */
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  /* letter-spacing: 1px; */
+  position: relative;
+  /* display: inline-block;  */
+  padding-bottom: 0.5rem;
+}
+
+
+
+.Sectores-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background-color: #00bfa6;
+  border-radius: 2px;
+}
+
+
+/* Contenedor para centrar el Sectores y limitar su ancho */
+.Sectores-wrapper {
   max-width: 900px; /* o el valor que prefieras */
   margin: 0 auto;    /* centra horizontalmente */
 }
@@ -22,7 +51,7 @@
   border-radius: 8px;
 }
 
-/*   Estilos el titulo del slider */      
+/*   Estilos el titulo del Sectores */      
 .carousel-caption h5 {
   font-size: 1.8rem;
   font-weight: bold;
@@ -32,7 +61,7 @@
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/*   Estilos del etxto del slider */      
+/*   Estilos del etxto del Sectores */      
 .carousel-caption p {
   font-size: 1rem;
   background-color: aqua;

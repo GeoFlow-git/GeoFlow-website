@@ -1,0 +1,115 @@
+.servicios-panel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70vh;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Panel izquierdo */
+.servicios-menu {
+  width: 40%;
+  padding: 2rem;
+  border-right: 3px solid #0cf1de;
+}
+
+.servicios-titulo {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #003366;
+  font-weight: 700;
+}
+
+.servicios-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  
+}
+
+.servicios-item {
+  position: relative; /* necesario para el pseudo-elemento */
+  padding: 1rem 2rem 1rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Agregar flecha a la derecha */
+.servicios-item::after {
+  content: "›"; /* símbolo similar a '>' pero más estilizado */
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #003366;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  
+}
+
+/* Efectos hover */
+.servicios-item:hover {
+  transform: translateX(10px);
+}
+
+/* La flecha cambia de color al pasar el cursor */
+.servicios-item:hover::after {
+  color: #0cf1de;
+  opacity: 1;
+}
+
+/* Cuando el servicio está activo */
+.servicios-item.activo::after {
+  color: #000;
+  opacity: 1;
+}
+
+/* Panel derecho */
+.servicios-detalle {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.servicios-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;
+  transition: all 0.4s ease;
+}
+
+.servicios-imagen {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.servicios-subtitulo {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.servicios-descripcion {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.5;
+}
