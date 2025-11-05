@@ -63,6 +63,12 @@ function Navbar() {
               </a>
             </li>
 
+            <li className="nav-item">
+              <a className="nav-link" href="#publicaciones">
+                Publicaciones
+              </a>
+            </li>
+
             {/* Icono Perfil + Dropdown */}
             <li className="nav-item dropdown ms-3 d-flex align-items-center">
               <span

@@ -38,7 +38,7 @@ function Publicaciones() {
   const anios = Object.keys(publicacionesPorAnio).sort((a, b) => b - a);
 
   return (
-    <section className="publicaciones-section py-5" id="publicaciones">
+    <section id="publicaciones" className="publicaciones-section py-5">
       <div className="container">
         <h2 className="text-center mb-5 fw-bold">
           Publicaciones y Documentación
