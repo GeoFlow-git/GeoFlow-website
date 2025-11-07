@@ -1,4 +1,6 @@
-const API_URL = "http://127.0.0.1:8000/auth";
+const API_URL = import.meta.env.PROD
+  ? "https://web-production-39d03.up.railway.app/auth" // producción (Railway)
+  : "http://127.0.0.1:8000/auth"; // desarrollo local
 
 // Registro
 export async function registerUser(formData) {
