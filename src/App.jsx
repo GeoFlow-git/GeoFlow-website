@@ -48,7 +48,8 @@ function App() {
   };
 
   return (
-    <Router basename="/GeoFlow-website">
+    // <Router basename="/GeoFlow-website">
+    <Router basename="/">
       {" "}
       {/* Configura el enrutador con la base correcta */}
       {/* 🧭 Header y Navbar visibles en todas las páginas */}
