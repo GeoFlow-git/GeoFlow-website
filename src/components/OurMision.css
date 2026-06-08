@@ -1,26 +1,27 @@
 
 
 .our-mission {
-  background-color: #00a2ffff;
+  background-color: #ff7300;
   font-size: 2rem;
  
 }
 
 .our-mission_2 {
-  background-color: #00a2ffff;
+  background-color: #ff7300;
 
 }
 
 .our-mission_3 {
-  background-color: #00a2ffff;
-  font-size: 3rem;
-
+  background-color: #ff7300;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
 }
 
 
 .our-mission_4 {
-  background-color: #00a2ffff;
+  background-color: #ff7300;
   font-size: 1.5rem;
+  color: rgb(255, 255, 255);
 
 }
 
