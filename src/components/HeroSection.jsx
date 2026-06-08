@@ -35,7 +35,7 @@ function HeroSection() {
           }
         });
       },
-      { threshold: 0.3 } // se activa cuando el 30% es visible
+      { threshold: 0.3 }, // se activa cuando el 30% es visible
     );
 
     if (img) observer.observe(img);
@@ -57,7 +57,10 @@ function HeroSection() {
               Desde petróleo y gas, hasta acuíferos y geotermia, convertimos
               datos en decisiones.
             </p>
-            <a href="#servicios" className="btn btn-primary btn-lg mt-3">
+            <a
+              href="#servicios"
+              className="btn btn-primary btn-lg mt-3 hero-button"
+            >
               Explora nuestros servicios
             </a>
           </div>

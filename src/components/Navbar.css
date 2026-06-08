@@ -4,7 +4,7 @@
 
 /* 1. ESTILOS GENERALES DE LA NAVBAR */
 .custom-navbar {
-  background-color: #414141;       /* Color de fondo principal */
+  background-color: #ff7300;       /* Color de fondo principal */
   padding: 1rem 5rem;              /* Espaciado interno */
   position: sticky;                /* Fija la barra al hacer scroll */
   top: 0;
@@ -152,7 +152,7 @@ a.nav-link.icono-navbar:focus:hover { /* incluye el caso en que está enfocado y
 
 
 
-/* /////////////////////////////////////// */
+/* //////////////   dropdown   /////////////// */
 
 
 
@@ -164,7 +164,7 @@ a.nav-link.icono-navbar:focus:hover { /* incluye el caso en que está enfocado y
 
 .navbar-nav .nav-item.dropdown .dropdown-item {
   color: #ffffff;
-  background-color: rgb(7, 88, 38);
+  background-color: rgb(92, 92, 92);
   transition: background-color 0.25s;
 }
 

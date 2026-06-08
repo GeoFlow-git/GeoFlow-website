@@ -37,3 +37,17 @@
     transform: scale(1.03);
   }
 }
+
+
+/* Link o boton */
+
+.hero-button {
+  background-color:  #ff7300 !important;
+  border-color:  #ff7300!important;
+  color: white !important;
+}
+
+.hero-button:hover {
+  background-color: #ff7300;
+  border-color: #ff7300;
+}
