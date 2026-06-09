@@ -1,28 +1,160 @@
+/* =====================================================
+   SECCIÓN
+===================================================== */
 
+.mission-section {
+  position: relative;
 
-.our-mission {
-  background-color: #ff7300;
-  font-size: 2rem;
- 
-}
+  padding: 8rem 0;
 
-.our-mission_2 {
-  background-color: #ff7300;
+  background: #f8f8f8;
 
-}
-
-.our-mission_3 {
-  background-color: #ff7300;
-  font-size: 4rem;
-  color: rgb(255, 255, 255);
+  overflow: hidden;
 }
 
 
-.our-mission_4 {
-  background-color: #ff7300;
+/* =====================================================
+   TITULO
+===================================================== */
+
+.mission-heading {
+  font-size: 3rem;
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  color: #111;
+
+  margin-bottom: 2rem;
+}
+
+.mission-heading span {
+  color: #ff7300;
+}
+
+/* =====================================================
+   DIVISOR
+===================================================== */
+
+.mission-divider {
+  width: 100px;
+  height: 3px;
+
+  background: #ff7300;
+
+  border-radius: 999px;
+
+  margin-bottom: 2rem;
+}
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.mission-description {
   font-size: 1.5rem;
-  color: rgb(255, 255, 255);
 
+  line-height: 1.8;
+
+  color: #4a4a4a;
+
+  margin-bottom: 1.5rem;
 }
 
+/* =====================================================
+   SERVICIOS
+===================================================== */
 
+.mission-features {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 3rem;
+}
+
+.mission-feature {
+  border-left: 1px solid #d9d9d9;
+
+  padding-left: 1rem;
+}
+
+.mission-feature h5 {
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: #111;
+
+  margin-bottom: 0.4rem;
+}
+
+.mission-feature p {
+  font-size: 0.9rem;
+
+  color: #666;
+
+  margin: 0;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.mission-logo {
+  width: 70%;
+
+  opacity: 0.95;
+
+  transition: transform 0.8s ease;
+}
+
+.mission-logo:hover {
+  transform: scale(1.25);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .mission-section {
+    padding: 5rem 0;
+  }
+
+  .mission-heading {
+    font-size: 3rem;
+    
+  }
+
+  .mission-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.mission-logo {
+  width: 10%;
+  max-width: 10px;
+
+  opacity: 0.01;
+
+  transition: transform 0.8s ease;
+}
+}
+
+@media (max-width: 768px) {
+
+  .mission-heading {
+    font-size: 2.4rem;
+  }
+
+  .mission-description {
+    font-size: 1rem;
+  }
+
+  .mission-features {
+    grid-template-columns: 1fr;
+  }
+}

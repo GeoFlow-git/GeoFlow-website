@@ -1,79 +1,148 @@
-.sobre-mi-section {
-  max-width: 1200px; /* Ajusta el ancho total de la sección */
-  margin: 0 auto;   /* Centra horizontalmente */
-  padding: 0 0rem;  /* Espaciado lateral en pantallas pequeñas */
-  background-color: transparent; /* Color suave de fondo */
-  border-radius: 18px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* =====================================================
+   SECCIÓN
+===================================================== */
+
+.about-section {
+  background: #f4f4f4;
+  overflow: hidden;
 }
 
+/* =====================================================
+   COLUMNA IZQUIERDA
+===================================================== */
 
-.sobre-mi-box {
-  background-color: transparent; /* Color suave de fondo */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-
-  /* border-radius: 18px; */
-  
+.about-content {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
+/* =====================================================
+   TITULO
+===================================================== */
 
-.sobre-mi-titulo {
-  color: #007bff; /* azul */
-  text-align: center;
+.about-title {
   font-size: 3rem;
-  margin-bottom: 1.5rem; /* equivalente a Bootstrap */
-  font-weight: bold;
-  
+  font-weight: 800;
+  line-height: 0.95;
+  color: #2b323b;
+  margin-bottom: 2rem;
 }
 
-/* Estilos para eliminar cualquier fondo no deseado en el contenido de Sobre Mi */
-.sobre-mi-contenido {
-  background-color: transparent; /* Fondo del recuadro interno */
-  border-radius: 8px;
-  padding: 0rem;
+/* =====================================================
+   LINEA DECORATIVA
+===================================================== */
+
+.about-divider {
+  width: 70px;
+  height: 4px;
+  background: #00a9d6;
+  border-radius: 999px;
+  margin-bottom: 2rem;
 }
 
+/* =====================================================
+   TEXTO
+===================================================== */
 
-/* Estilos para los títulos dentro de sobre-mi-box */
-.sobre-mi-box h4 {
-    background-color:  transparent; /* Color suave de fondo */
-    font-size: 2rem;
-  color: #ffffff;
-   border-radius: 0px;
-  background-color: #ff7300;
-  margin-right: 10rem;
-  margin-left: 0rem;
-  padding: 0.5rem ; 
-  
+.about-text {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #3f4650;
+  max-width: 450px;
+  margin-bottom: 3rem;
 }
 
-/* Estilos para los párrafos dentro de sobre-mi-box */
-.sobre-mi-box p {
-    background-color: #ff7300; /* Color suave de fondo */
-    color: #ffffff;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  border-radius: 68px;
-  padding: 2rem; 
-    margin-top: 0rem;
-  margin-bottom: 1rem;
-  margin-left: 5rem;
-  margin-right: 1rem;
-  text-align: justify;
-  
-  /* margin-bottom: 5rem; separa cada párrafo */
+/* =====================================================
+   LINK
+===================================================== */
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+
+  text-decoration: none;
+
+  color: #00a9d6;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  border-bottom: 2px dashed #00a9d6;
+
+  padding-bottom: 8px;
+
+  transition: all 0.3s ease;
 }
 
-
-
-
-/* Columna que  contiene la imagen */
-.sobre-mi-imagen {
-  background-color: transparent; /* o el color que prefieras */
+.about-link:hover {
+  color: #0087ac;
 }
 
-/* Columna que  contiene el texto */
-.sobre-mi-texto {
-  background-color: transparent; /* Elimina fondo blanco */
+.about-link span {
+  font-size: 2rem;
+}
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+
+
+.about-image {
+  width: 80%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  margin-left: auto;
+ 
+}
+
+/* =====================================================
+   CENTRAR TODA LA COMPOSICIÓN
+===================================================== */
+
+.about-section .row {
+  justify-content: center;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .about-content {
+    padding: 3rem;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  .about-link {
+    font-size: 1.2rem;
+  }
 }

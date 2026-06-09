@@ -12,8 +12,8 @@ function HeaderInfo() {
           <img
             src={`${basePath}${"Logo_letras.png"}`}
             alt="GeoFlow Logo"
-            width="325"
-            height="80"
+            width="275"
+            height="100"
             className="me-3"
           />
         </div>
