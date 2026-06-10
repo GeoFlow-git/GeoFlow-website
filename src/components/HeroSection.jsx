@@ -47,9 +47,9 @@ function HeroSection() {
   return (
     <section className="hero-section py-5 bg-light">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="lol row align-items-center">
           {/* Texto a la izquierda */}
-          <div className="texto col-md-3 text-center text-md-start ms-auto">
+          <div className="lol_2 texto col-md-3 text-center text-md-start ms-auto">
             <h1 className="hero-title">
               <span className="hero-title-small">SIMULACIÓN Y MODELADO DE</span>
 

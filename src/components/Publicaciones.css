@@ -1,47 +1,166 @@
+/* =====================================================
+   SECCIÓN
+===================================================== */
+
 .publicaciones-section {
-  background-color: #f9fafc;
-}
-
-.anio-titulo {
-  color: #006a8e; /* Azul turquesa corporativo */
-  border-left: 4px solid #00aaff;
-  padding-left: 10px;
-  font-weight: 600;
-}
-
-.publication-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  border-radius: 10px;
+  background: #f1efeb;
+  padding: 100px 150px;
   overflow: hidden;
 }
 
-.publication-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.publicaciones-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: #f1efeb;
 }
 
-.portada-img {
-  height: 250px;
-  object-fit: cover;
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.publicaciones-text {
+  flex: 0 0 600px;
+  background: #f1efeb;
 }
 
-.card-title {
-  font-size: 1.1rem;
+.publicaciones-label {
+  display: inline-block;
+  margin-bottom: 0;
+  background: #f1efeb;
+
+  font-size: 3rem;
   font-weight: 600;
-  color: #003366;
+  letter-spacing: 3px;
+  color: #f28c28;
 }
 
-.card-text {
-  font-size: 0.95rem;
-  color: #444;
+.publicaciones-text h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #343434;
+  background: #f1efeb;
+
+  margin-bottom: 25px;
 }
 
-.btn-primary {
-  background-color: #0077b6;
-  border: none;
+.publicaciones-text p {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #666;
+  background: #f1efeb;
+
+  margin-bottom: 40px;
 }
 
-.btn-primary:hover {
-  background-color: #0096c7;
+/* =====================================================
+   LINK
+===================================================== */
+
+.publicaciones-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #f1efeb;
+
+  text-decoration: none;
+  color: #343434;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.publicaciones-link svg {
+  transition: transform 0.3s ease;
+  background: #f1efeb;
+}
+
+.publicaciones-link:hover {
+  color: #f28c28;
+}
+
+.publicaciones-link:hover svg {
+  transform: translateX(6px);
+}
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.publicaciones-image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Ajusta este valor para acercar más la imagen */
+  margin-left: -50px;
+}
+
+.publicaciones-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  background: #f1efeb;
+
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.12));
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 992px) {
+  .publicaciones-section {
+    padding: 80px 40px;
+  }
+
+  .publicaciones-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .publicaciones-text {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .publicaciones-link {
+    justify-content: center;
+  }
+
+  .publicaciones-image {
+    margin-left: 0;
+  }
+
+  .publicaciones-image img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .publicaciones-section {
+    padding: 60px 25px;
+  }
+
+  .publicaciones-text h2 {
+    font-size: 2.6rem;
+  }
+
+  .publicaciones-text p {
+    font-size: 1rem;
+  }
+
+  .publicaciones-label {
+    font-size: 1.8rem;
+  }
 }

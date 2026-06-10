@@ -3,100 +3,14 @@
 ===================================================== */
 
 .mission-section {
-  position: relative;
-
-  padding: 8rem 0;
-
-  background: #f8f8f8;
-
-  overflow: hidden;
+  background: #f5f5f5;
+  padding: 120px 20px;
 }
 
-
-/* =====================================================
-   TITULO
-===================================================== */
-
-.mission-heading {
-  font-size: 3rem;
-  font-weight: 800;
-
-  line-height: 1.05;
-
-  color: #111;
-
-  margin-bottom: 2rem;
-}
-
-.mission-heading span {
-  color: #ff7300;
-}
-
-/* =====================================================
-   DIVISOR
-===================================================== */
-
-.mission-divider {
-  width: 100px;
-  height: 3px;
-
-  background: #ff7300;
-
-  border-radius: 999px;
-
-  margin-bottom: 2rem;
-}
-
-/* =====================================================
-   TEXTO
-===================================================== */
-
-.mission-description {
-  font-size: 1.5rem;
-
-  line-height: 1.8;
-
-  color: #4a4a4a;
-
-  margin-bottom: 1.5rem;
-}
-
-/* =====================================================
-   SERVICIOS
-===================================================== */
-
-.mission-features {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 1rem;
-
-  margin-top: 3rem;
-}
-
-.mission-feature {
-  border-left: 1px solid #d9d9d9;
-
-  padding-left: 1rem;
-}
-
-.mission-feature h5 {
-  font-size: 1rem;
-
-  font-weight: 700;
-
-  color: #111;
-
-  margin-bottom: 0.4rem;
-}
-
-.mission-feature p {
-  font-size: 0.9rem;
-
-  color: #666;
-
-  margin: 0;
+.mission-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* =====================================================
@@ -104,57 +18,127 @@
 ===================================================== */
 
 .mission-logo {
-  width: 70%;
-
-  opacity: 0.95;
-
-  transition: transform 0.8s ease;
+  width: 300px;
+  margin-bottom: 40px;
 }
 
-.mission-logo:hover {
-  transform: scale(1.25);
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.mission-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  margin-left: 120px;
+  flex-wrap: wrap;
+}
+
+.company-name {
+  width: 300px;
+}
+
+.mission-line {
+  width: 3px;
+  height: 120px;
+  background: #f58220;
+  margin: 0px 0px 0px;
+}
+
+.mission-title {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0px 0px 0px;
+  color: #111;
+}
+
+.mission-title span {
+  color: #f58220;
+}
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.mission-text {
+  max-width: 950px;
+  margin: 0 auto 80px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  line-height: 1.7;
+  font-style: italic;
+  font-weight: 600;
+
+  color: #111;
+}
+
+/* =====================================================
+   FIRMA
+===================================================== */
+
+.mission-signature {
+  width: 500px;
+  max-width: 90%;
+  margin-bottom: 25px;
+}
+
+/* =====================================================
+   AUTOR
+===================================================== */
+
+.mission-author p {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.mission-author span {
+  font-size: 1.5rem;
+  color: #222;
 }
 
 /* =====================================================
    RESPONSIVE
 ===================================================== */
 
-@media (max-width: 992px) {
-
-  .mission-section {
-    padding: 5rem 0;
-  }
-
-  .mission-heading {
-    font-size: 3rem;
-    
-  }
-
-  .mission-features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-.mission-logo {
-  width: 10%;
-  max-width: 10px;
-
-  opacity: 0.01;
-
-  transition: transform 0.8s ease;
-}
-}
-
 @media (max-width: 768px) {
 
-  .mission-heading {
-    font-size: 2.4rem;
+  .mission-logo {
+    width: 180px;
   }
 
-  .mission-description {
+  .mission-header {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .mission-line {
+    width: 100px;
+    height: 3px;
+  }
+
+  .company-name {
+    width: 220px;
+  }
+
+  .mission-title {
+    font-size: 2.5rem;
+  }
+
+  .mission-text {
+    font-size: 1.4rem;
+  }
+
+  .mission-author p {
+    font-size: 1.2rem;
+  }
+
+  .mission-author span {
     font-size: 1rem;
-  }
-
-  .mission-features {
-    grid-template-columns: 1fr;
   }
 }
