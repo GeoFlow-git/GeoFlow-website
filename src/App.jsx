@@ -18,6 +18,7 @@ import Tecnologias from "./components/Tecnologias.jsx";
 import OurMision from "./components/OurMision";
 import ServicioPanel from "./components/ServicioPanel";
 import Publicaciones from "./components/Publicaciones";
+import VisionRol from "./components/VisionRol";
 
 // ======= PÁGINAS =======
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -64,11 +65,16 @@ function App() {
             <>
               <HeroSection />
 
+              <div className="Sobre_mi-section">
+                <SobreMi />
+              </div>
+
               <div className="our-mission-section">
                 <OurMision />
               </div>
-              <div className="Sobre_mi-section">
-                <SobreMi />
+
+              <div className="VisionRol-section">
+                <VisionRol />
               </div>
 
               {/* <div className="section-transition"></div> */}

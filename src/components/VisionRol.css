@@ -1,0 +1,293 @@
+/* =====================================================
+   SECCIÓN GENERAL
+===================================================== */
+
+.vision-section {
+  background: #f7f7f5;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.vision-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.vision-small-title {
+  color: #0b2239;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.vision-header h2 {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0b2239;
+  line-height: 1.2;
+}
+
+
+.texto-uno {
+  color: #00a6b8;
+}
+
+.texto-dos {
+  color: #0b2239;
+}
+
+.texto-tres {
+  color: #ff7300;
+}
+
+/* =====================================================
+   CONTENEDOR PANELES
+===================================================== */
+
+.vision-panels {
+  max-width: 1600px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  position: relative;
+
+  padding: 0 40px;
+}
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.vision-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* =====================================================
+   IMÁGENES
+===================================================== */
+
+.vision-geotermia,
+.vision-city {
+  width: 100%;
+  height: 80%;
+  /* object-fit: cover; */
+  object-position: center 90%;
+  transform: scale(1.);
+}
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.vision-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 70px;
+
+  background: transparent;
+  font-weight: 700;
+  
+}
+
+.vision-overlay h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.9);
+   background: transparent;
+  color: #ff7300;
+  margin-top: -50px;   /* ← subir */
+  text-shadow:
+  1px 1px 4px #ffffff,
+  1px 1px 4px #ffffff,
+  1px 1px 4px #ffffff,
+  1px 1px 4px #ffffff;
+  
+  
+}
+
+.vision-overlay p {
+  max-width: 500px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+    background: rgba(255, 255, 255, 0.9);
+     background: transparent;
+    color: #000000;
+    
+    
+}
+
+/* =====================================================
+   ICONOS
+===================================================== */
+
+.vision-icons {
+  position: absolute;
+  bottom: 150px;
+  display: flex;
+  gap: 40px;
+  background: transparent !important;
+
+
+}
+
+.vision-icons div {
+  text-align: center;
+  background: transparent !important;
+}
+
+.vision-icons span {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: transparent !important;
+
+}
+
+.vision-icons p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background: transparent !important;
+  
+}
+
+/* =====================================================
+   LOGO CENTRAL
+===================================================== */
+
+.vision-center-logo {
+  position: absolute;
+
+  left: 50%;
+  top:45%;
+
+  transform: translate(-50%, -50%);
+
+  width: 260px;
+  height: 260px;
+
+  background: white;
+
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  z-index: 10}
+
+.logo-geoflow {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.vision-footer {
+  margin-top: 0px;
+
+  background: linear-gradient(
+    90deg,
+    #08344b,
+    #0b2239
+  );
+
+  color: white;
+
+  text-align: center;
+
+  padding: 40px;
+}
+
+.vision-footer p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 100;
+  background: transparent !important;
+  color: #ff7300;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .vision-overlay {
+    padding: 50px;
+  }
+
+  .vision-overlay h3 {
+    font-size: 1.8rem;
+  }
+
+  .vision-center-logo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .logo-geoflow {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .vision-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-center-logo {
+    display: none;
+  }
+
+  .vision-geotermia,
+  .vision-city {
+    height: 450px;
+  }
+
+  .vision-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .vision-overlay {
+    padding: 35px;
+  }
+
+  .vision-icons {
+    gap: 20px;
+  }
+
+  .vision-icons span {
+    font-size: 1.5rem;
+  }
+
+  .vision-overlay h3 {
+    font-size: 1.5rem;
+  }
+
+  .vision-overlay p {
+    font-size: 0.95rem;
+  }
+}
